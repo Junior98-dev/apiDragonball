@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-toolbar',
   imports: [],
   template: `
-    <p>
-      toolbar works!
-    </p>
+   <div class="container-toolbar">
+     <h3>Dragon<span>ball Z</span></h3>
+   </div> 
   `,
   styles: ``
 })
