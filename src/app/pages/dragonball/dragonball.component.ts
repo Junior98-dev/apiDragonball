@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './dragonball.component.html',
   styleUrl: './dragonball.component.scss'
 })
-export class DragonballComponent {
+export default class DragonballComponent {
 
 }
