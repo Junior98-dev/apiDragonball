@@ -1,15 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
+import { DragonBallCharacter } from '../models/Dragonballz.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApidragonballzService {
 
-  API = 'https://www.dragonball-api.com/api';
-  http = Inject(HttpClient);
+  API = 'https://dragonball-api.com/api';
+  http = inject(HttpClient);
 
-  getAllCharacters() {
-    return this.http.get(`${this.API}/characters/`);
-  }
+  getAllCharacters = () => { return this.http.get<DragonBallCharacter[]>(`${this.API}/characters`); }
 }
