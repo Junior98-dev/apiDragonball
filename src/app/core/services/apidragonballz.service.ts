@@ -9,7 +9,7 @@ export class ApidragonballzService {
   API = 'https://www.dragonball-api.com/api';
   http = Inject(HttpClient);
 
-  getAllCharacters(data : string) {
-    return this.http.get(`${this.API}/${data}`);
+  getAllCharacters() {
+    return this.http.get(`${this.API}/characters/`);
   }
 }
