@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { ApidragonballzService } from '../../core/services/apidragonballz.service';
-import { JsonPipe } from '@angular/common';
 import { DragonBallCharacter } from '../../core/models/Dragonballz.model';
+import { RouterLink } from '@angular/router';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-dragonball',
@@ -11,13 +12,14 @@ import { DragonBallCharacter } from '../../core/models/Dragonballz.model';
   styleUrl: './dragonball.component.scss'
 })
 export default class DragonballComponent implements OnInit {
-  dragonball?: DragonBallCharacter[];
-  
-  constructor(private api: ApidragonballzService) {}
+  dragonballzs?: DragonBallCharacter[];
+  apiDragonballzService = inject(ApidragonballzService);
 
-  ngOnInit() {
-    this.api.getAllCharacters().subscribe((data) => {
-      this.dragonball = data;
-    });
+
+  ngOnInit(): void {
+    this.apiDragonballzService.getAllCharacters().subscribe((data) => {
+      this.dragonballzs = data;
+      console.log(this.dragonballzs);  
+    })
   }
 }

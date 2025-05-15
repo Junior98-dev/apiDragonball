@@ -6,9 +6,13 @@ import { DragonBallCharacter } from '../models/Dragonballz.model';
   providedIn: 'root'
 })
 export class ApidragonballzService {
+ Url = 'https://dragonball-api.com/api' 
+ http = inject(HttpClient);
 
-  API = 'https://dragonball-api.com/api';
-  http = inject(HttpClient);
-
-  getAllCharacters = () => { return this.http.get<DragonBallCharacter[]>(`${this.API}/characters`); }
+ getAllCharacters() {
+  return this.http.get<DragonBallCharacter[]>(`${this.Url}/characters`);
+ }
+ getCharacterById(id:number){
+  return this.http.get<DragonBallCharacter>(`${this.Url}/characters/${id}`);
+ }
 }
