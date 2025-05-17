@@ -4,6 +4,12 @@ export interface Character {
   ki: string;
   maxKi: string;
   race: string;
+  gender: string;
+  description: string;
+  image: string;
+  affiliation: string;
+  deletedAt: string;
+
 }
 
 export interface Meta {
@@ -26,8 +32,3 @@ export interface DragonBallCharacter {
   meta: Meta;
   links: Links;
 }
-
-
-
-
-

@@ -12,7 +12,7 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './dragonball.component.scss'
 })
 export default class DragonballComponent implements OnInit {
-  dragonballzs?: DragonBallCharacter[];
+  dragonballzs?: DragonBallCharacter;
   apiDragonballzService = inject(ApidragonballzService);
 
 

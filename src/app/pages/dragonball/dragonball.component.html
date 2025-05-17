@@ -1,1 +1,7 @@
-<p>dragonball works!</p>
+<div class="drangon-container">
+    @for (dragonball of dragonballzs?.items; track $index) {
+        <img [src]="dragonball.image" alt="{{dragonball.name}}" />
+    }@empty {
+        <p align="center"> Aucun personnage n'a été trouvé</p>
+    }
+</div>
