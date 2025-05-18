@@ -19,7 +19,6 @@ main {
 .dragonball-card {
   width: 250px;
   border-radius: 10px;
-  transition: 250ms ease-in-out;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
@@ -29,6 +28,7 @@ main {
     padding: 0.5rem;
     height: 300px;
     object-fit: contain;
+    transition: 250ms ease-in;
 
     &:hover {
       transform: scale(1.5);

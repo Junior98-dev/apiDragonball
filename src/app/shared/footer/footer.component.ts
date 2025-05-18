@@ -4,11 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   imports: [],
   template: `
-    <p>
-      footer works!
-    </p>
+   <footer>
+    <h3></h3>
+   </footer>
   `,
-  styles: ``
+  styles: `
+    footer{
+      width: 100%;
+      height: 50px;
+      background-color: white;
+      color: black;
+    }
+  `
 })
 export class FooterComponent {
 
