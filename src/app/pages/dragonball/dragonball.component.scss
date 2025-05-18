@@ -1,5 +1,5 @@
 main {
-    width: 80%;
+  width: 80%;
   max-width: max-content;
   margin: auto;
 }
@@ -18,9 +18,10 @@ main {
 
 .dragonball-card {
   width: 250px;
-  border: 1px solid #e4e4e4;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: 250ms ease-in-out;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   img {
     width: calc(100% - 1rem);
@@ -29,8 +30,20 @@ main {
     height: 300px;
     object-fit: contain;
 
-    &:hover{
-        transform: scale(1.5);
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  .dragon-info {
+    background-color: #0d0d0d;
+    padding: 0.5rem 1rem;
+
+    .color1 {
+      color: white;
+    }
+    .color {
+      color: rgb(251, 192, 45);
+      font-weight: 400;
     }
   }
 }
