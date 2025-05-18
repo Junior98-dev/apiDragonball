@@ -1,7 +1,27 @@
-<div class="drangon-container">
+<main class="max-width">
+    <div class="drangon-container">
     @for (dragonball of dragonballzs?.items; track $index) {
-        <img [src]="dragonball.image" alt="{{dragonball.name}}" />
+        <a routerLink="/" class="dragonball-card">
+            <img [src]="dragonball.image" alt="{{dragonball.name}}" />
+            <div class="dragon-info">
+                <h2>{{dragonball.name}}</h2>
+                <p>{{dragonball.race}} - {{dragonball.gender}}</p>
+                <br>
+                <p>Base KI:</p>
+                <p><b>{{dragonball.ki}}</b></p>
+                <br>
+                <p>Total KI:</p>
+                <p><b>{{dragonball.maxKi}}</b></p>
+                
+                <br>
+                <p>Affiliation:</p>
+                <p><b>{{dragonball.affiliation}}</b></p>
+                <br>
+                
+            </div>
+        </a>
     }@empty {
         <p align="center"> Aucun personnage n'a été trouvé</p>
     }
 </div>
+</main>

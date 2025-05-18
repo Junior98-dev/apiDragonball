@@ -7,7 +7,7 @@ import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-dragonball',
-  imports: [JsonPipe],
+  imports: [RouterLink],
   templateUrl: './dragonball.component.html',
   styleUrl: './dragonball.component.scss'
 })

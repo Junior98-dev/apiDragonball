@@ -14,6 +14,9 @@ import { FooterComponent } from './shared/footer/footer.component';
   ],
   template: `
     <app-toolbar />
+    <br>
+    <br>
+    <br>
     <router-outlet />
     <app-footer />
   `,
