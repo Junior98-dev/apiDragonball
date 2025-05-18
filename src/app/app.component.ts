@@ -18,6 +18,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     <br>
     <br>
     <router-outlet />
+    <br>
+    <br>
     <app-footer />
   `,
   styles: [],

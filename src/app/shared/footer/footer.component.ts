@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   styles: `
     footer{
       width: 100%;
-      height: 50px;
+      height: 75px;
       background-color: white;
       color: black;
     }
