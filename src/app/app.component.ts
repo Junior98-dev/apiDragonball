@@ -7,19 +7,15 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    ToolbarComponent,
-    FooterComponent,
-  ],
+  imports: [RouterOutlet, ToolbarComponent, FooterComponent],
   template: `
     <app-toolbar />
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
     <router-outlet />
-    <br>
-    <br>
+    <br />
+    <br />
     <app-footer />
   `,
   styles: [],

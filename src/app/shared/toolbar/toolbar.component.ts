@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   template: `
    <div class="container-toolbar">
     <div class="toolbar">
-      <h2>Dragon<span>ball Z</span></h2>
-    </div>  
+      <img src="Dragon_Ball_Z_Logo_A.png" alt="Dragon Ball Z" width="200" height="50">
+    </div>
    </div> 
   `,
   styles: `
