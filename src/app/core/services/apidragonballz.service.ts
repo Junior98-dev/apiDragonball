@@ -10,7 +10,7 @@ export class ApidragonballzService {
  http = inject(HttpClient);
 
  getAllCharacters() {
-  return this.http.get<DragonBallCharacter>(`${this.Url}/characters`);
+  return this.http.get<DragonBallCharacter>(`${this.Url}/characters?limit=12`);
  }
  getCharacterById(id:number){
   return this.http.get<DragonBallCharacter>(`${this.Url}/characters/${id}`);
