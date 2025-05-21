@@ -22,11 +22,9 @@ import { Component } from '@angular/core';
       width: 80%;
       height: 60px;
       margin: 0 auto;
-      padding: 0.9rem 0;
 
-     span{
-      color: #ffcc00;
-      font-weight: bold;
+     img{
+      align-items: center;
      }
     }
   }
