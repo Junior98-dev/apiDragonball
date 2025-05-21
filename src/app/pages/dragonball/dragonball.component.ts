@@ -12,6 +12,7 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './dragonball.component.scss'
 })
 export default class DragonballComponent implements OnInit {
+  loading = true;
   dragonballzs?: DragonBallCharacter;
   apiDragonballzService = inject(ApidragonballzService);
 
@@ -19,7 +20,7 @@ export default class DragonballComponent implements OnInit {
   ngOnInit(): void {
     this.apiDragonballzService.getAllCharacters().subscribe((data) => {
       this.dragonballzs = data;
-      console.log(this.dragonballzs);  
+      this.loading = false; 
     })
   }
 }

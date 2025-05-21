@@ -1,29 +1,40 @@
 <main class="max-width">
-    <div class="drangon-container">
+  @if (loading) {
+  <h3>Chargement...</h3>
+  }@else {
+  <div class="drangon-container">
     @for (dragonball of dragonballzs?.items; track $index) {
-        <a routerLink="/" class="dragonball-card">
-            <div class="card-haid">
-                <img [src]="dragonball.image" alt="{{dragonball.name}}" />
-            </div>
-            <div class="dragon-info">
-                <h3 class="color1">{{dragonball.name}}</h3>
-                <p class="color" style="font-weight: 700;">{{dragonball.race}} - {{dragonball.gender}}</p>
-                <br>
-                <p class="color1" style="font-weight: 700;">Base KI:</p>
-                <p class="color"><b>{{dragonball.ki}}</b></p>
-                <br>
-                <p class="color1" style="font-weight: 700;">Total KI:</p>
-                <p class="color"><b>{{dragonball.maxKi}}</b></p>
-                
-                <br>
-                <p class="color1" style="font-weight: 700;">Affiliation:</p>
-                <p class="color"><b>{{dragonball.affiliation}}</b></p>
-                <br>
-                
-            </div>
-        </a>
+    <a [routerLink]="'/dragonball/' + dragonball.id" class="dragonball-card">
+      <div class="card-haid">
+        <img [src]="dragonball.image" alt="{{ dragonball.name }}" />
+      </div>
+      <div class="dragon-info">
+        <h3 class="color1">{{ dragonball.name }}</h3>
+        <p class="color" style="font-weight: 700">
+          {{ dragonball.race }} - {{ dragonball.gender }}
+        </p>
+        <br />
+        <p class="color1" style="font-weight: 700">Base KI:</p>
+        <p class="color">
+          <b>{{ dragonball.ki }}</b>
+        </p>
+        <br />
+        <p class="color1" style="font-weight: 700">Total KI:</p>
+        <p class="color">
+          <b>{{ dragonball.maxKi }}</b>
+        </p>
+
+        <br />
+        <p class="color1" style="font-weight: 700">Affiliation:</p>
+        <p class="color">
+          <b>{{ dragonball.affiliation }}</b>
+        </p>
+        <br />
+      </div>
+    </a>
     }@empty {
-        <p align="center"> Aucun personnage n'a été trouvé</p>
+    <p align="center">Aucun personnage n'a été trouvé</p>
     }
-</div>
+  </div>
+  }
 </main>
