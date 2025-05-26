@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { DragonBallCharacter } from '../models/Dragonballz.model';
+import { Character, DragonBallCharacter } from '../models/Dragonballz.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,6 @@ export class ApidragonballzService {
   return this.http.get<DragonBallCharacter>(`${this.Url}/characters?limit=12`);
  }
  getCharacterById(id:number){
-  return this.http.get<DragonBallCharacter>(`${this.Url}/characters/${id}`);
+  return this.http.get<Character>(`${this.Url}/characters/${id}`);
  }
 }

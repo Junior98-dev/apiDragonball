@@ -1,1 +1,38 @@
-<p>dragonball-info works!</p>
+<main class="max-width">
+  @if (loading()) {
+  <h3>Chargement...</h3>
+  }@else { < class="dragon-container"> @if (dragonball) {
+  <img
+    [src]="dragonball.image"
+    alt="{{ dragonball.name }}"
+    class="dragon-image"
+  />
+  <div class="dragon-info">
+    <h3 class="color1">{{ dragonball.name }}</h3>
+    <p class="color" style="font-weight: 700">
+      {{ dragonball.race }} - {{ dragonball.gender }}
+    </p>
+    <br />
+    <p class="color1" style="font-weight: 700">Base KI:</p>
+    <p class="color">
+      <b>{{ dragonball.ki }}</b>
+    </p>
+    <br />
+    <p class="color1" style="font-weight: 700">Total KI:</p>
+    <p class="color">
+      <b>{{ dragonball.maxKi }}</b>
+    </p>
+
+    <br />
+    <p class="color1" style="font-weight: 700">Affiliation:</p>
+    <p class="color">
+      <b>{{ dragonball.affiliation }}</b>
+    </p>
+    <br />
+    <hr>
+    <p>{{ dragonball.description}}</p>
+  </div>
+  }@else {
+  <p>Aucune information disponible</p>
+  } }
+</main>

@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
-  imports: [],
+  imports: [RouterLink],
   template: `
-   <div class="container-toolbar">
-    <div class="toolbar">
-      <img src="Dragon_Ball_Z_Logo_A.png" alt="Dragon Ball Z" width="200" height="50">
+    <div class="container-toolbar">
+      <div class="toolbar">
+        <a routerLink="/">
+          <img
+            src="Dragon_Ball_Z_Logo_A.png"
+            alt="Dragon Ball Z"
+            width="200"
+            height="50"
+          />
+        </a>
+      </div>
     </div>
-   </div> 
   `,
   styles: `
     .container-toolbar {
@@ -30,8 +38,6 @@ import { Component } from '@angular/core';
   }
 
 
-  `
+  `,
 })
-export class ToolbarComponent {
-  
-}
+export class ToolbarComponent {}
